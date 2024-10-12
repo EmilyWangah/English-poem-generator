@@ -17,7 +17,7 @@ function generatePoem(event){
     let instructionsInput = document.querySelector("#user-instructions");
     let apiKey ="b2ftbed3f683eac832c6c0ec983o4a40";
     let prompt =`User instructions: Generate a English poem about flowers ${instructionsInput.value}`;
-    let context ="You are a romantic poem expert and you love to write short poems. your mission is to generate a four line poem in basic HTML and separate each line with a <br>. do not write the word html at all on the poem page, just start generating the poem itself without saying anything else.sign the poem saying by Emily's AI poem generator with a <strong> it should be italic. make sure to follow the user instructions";
+    let context ="You are a romantic poem expert and you love to write short poems. your mission is to generate a four line poem in basic HTML and separate each line with a <br>. DO NOT write the word html at all on the poem page, just start generating the poem itself without saying anything else.sign the poem saying by Emily's AI poem generator with a <strong> it should be italic. make sure to follow the user instructions";
     let apiUrl =`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     let poemElement = document.querySelector("#poem");
     poemElement.classList.remove("hidden");
